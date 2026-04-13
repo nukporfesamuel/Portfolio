@@ -4,123 +4,133 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Samuel Nukporfe | Urban Informatics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#f9f8f6;--white:#fff;--dark:#1a1a1a;--mid:#555;--light:#e8e6e1;
+  --bg:#f9f8f6;--white:#fff;--dark:#1a1a1a;--mid:#666;--light:#e8e6e1;
   --accent:#2d6a4f;--accent2:#74c69d;--accent3:#e76f51;--accent4:#457b9d;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
 
 nav{position:fixed;top:0;width:100%;background:rgba(249,248,246,.96);backdrop-filter:blur(8px);
   border-bottom:1px solid var(--light);z-index:100;padding:0 2rem}
 .nav-inner{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px}
-.nav-logo{font-weight:700;font-size:.95rem;letter-spacing:.04em;color:var(--dark);text-decoration:none}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--dark);text-decoration:none;letter-spacing:.01em}
 .nav-links{display:flex;gap:1.8rem;list-style:none}
-.nav-links a{text-decoration:none;color:var(--mid);font-size:.88rem;letter-spacing:.03em;transition:color .2s}
+.nav-links a{text-decoration:none;color:var(--mid);font-size:.85rem;font-weight:500;letter-spacing:.04em;transition:color .2s}
 .nav-links a:hover{color:var(--accent)}
 
+/* HERO */
 #home{min-height:100vh;display:flex;align-items:center;padding:80px 2rem 2rem}
-.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.hero-text h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.15;margin-bottom:1rem}
-.hero-text h1 span{color:var(--accent)}
-.hero-text p{color:var(--mid);font-size:1.05rem;max-width:440px;margin-bottom:2rem}
-.btn{display:inline-block;padding:.65rem 1.4rem;border-radius:6px;font-size:.88rem;font-weight:600;text-decoration:none;transition:all .2s}
+.hero-inner{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center}
+.hero-eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem}
+.hero-text h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,3.6rem);font-weight:400;line-height:1.1;margin-bottom:1.2rem}
+.hero-text h1 em{color:var(--accent);font-style:italic}
+.hero-text p{color:var(--mid);font-size:.98rem;max-width:420px;margin-bottom:2rem;font-weight:300;line-height:1.75}
+.btn{display:inline-block;padding:.65rem 1.4rem;border-radius:4px;font-size:.83rem;font-weight:600;text-decoration:none;transition:all .2s;letter-spacing:.03em}
 .btn-primary{background:var(--accent);color:#fff;margin-right:.75rem}
 .btn-primary:hover{background:#1b4f38}
 .btn-outline{border:1.5px solid var(--dark);color:var(--dark)}
 .btn-outline:hover{background:var(--dark);color:#fff}
-.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-top:1.5rem}
-.skill-tag{background:var(--white);border:1px solid var(--light);border-radius:8px;padding:.5rem .85rem;font-size:.82rem;color:var(--mid);text-align:center}
-.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.stat-card{background:var(--white);border-radius:12px;padding:1.5rem;border:1px solid var(--light);text-align:center}
-.stat-card .num{font-size:2rem;font-weight:800;color:var(--accent);display:block}
-.stat-card .lbl{font-size:.78rem;color:var(--mid);margin-top:.25rem}
+
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin-top:1.75rem}
+.skill-tag{background:var(--white);border:1px solid var(--light);border-radius:6px;padding:.45rem .8rem;font-size:.78rem;color:var(--mid);text-align:center;font-weight:500}
+
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.stat-card{background:var(--white);border-radius:10px;padding:1.35rem 1.25rem;border:1px solid var(--light);text-align:center}
+.stat-card .num{font-family:'DM Serif Display',serif;font-size:2rem;font-weight:400;color:var(--accent);display:block;line-height:1}
+.stat-card .lbl{font-size:.73rem;color:var(--mid);margin-top:.4rem;font-weight:400}
 .stat-card.t2{border-top:3px solid var(--accent2)}
 .stat-card.t3{border-top:3px solid var(--accent3)}
 .stat-card.t4{border-top:3px solid var(--accent4)}
 .stat-card.t5{border-top:3px solid var(--accent)}
 
+/* SECTIONS */
 section{padding:5rem 2rem}
 .section-inner{max-width:1100px;margin:auto}
-.section-label{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
-.section-title{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:.5rem}
-.section-sub{color:var(--mid);max-width:540px;margin-bottom:3rem;font-size:.95rem}
+.section-eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+.section-title{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;margin-bottom:.6rem;line-height:1.15}
+.section-sub{color:var(--mid);max-width:520px;margin-bottom:3rem;font-size:.92rem;font-weight:300;line-height:1.7}
 
-.projects-grid{display:grid;gap:3rem}
-.project-card{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--light);display:grid;grid-template-columns:1fr 1fr;transition:box-shadow .2s}
-.project-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.09)}
-.project-card.flip .proj-visual{order:2}
-.project-card.flip .proj-content{order:1}
-.proj-visual{min-height:380px;position:relative;overflow:hidden;display:flex;align-items:stretch}
-.proj-content{padding:2.5rem;display:flex;flex-direction:column;justify-content:space-between}
-.proj-num{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);margin-bottom:.4rem}
-.proj-content h3{font-size:1.2rem;font-weight:800;margin-bottom:.75rem;line-height:1.3}
-.tag{display:inline-block;background:var(--bg);border:1px solid var(--light);border-radius:20px;padding:.2rem .7rem;font-size:.73rem;color:var(--mid);margin:.2rem .15rem 0 0}
-.proj-meta{margin:1rem 0;flex:1}
-.proj-meta dt{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:.85rem}
-.proj-meta dd{font-size:.86rem;color:var(--mid);margin-top:.2rem}
-.proj-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.2rem;font-size:.82rem;font-weight:600;color:var(--accent);text-decoration:none;border:1.5px solid var(--accent);border-radius:6px;padding:.4rem .9rem;width:fit-content}
-.proj-link:hover{background:var(--accent);color:#fff}
+/* PROJECT THUMBNAILS */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 
-.p1-wrap{width:100%;display:flex;flex-direction:column;gap:0;background:#f4f7f4}
-.p1-map{flex:1;padding:1.25rem;background:#f4f7f4;min-height:300px}
-.p1-chart{background:#fff;padding:1rem 1.25rem;border-top:1px solid var(--light)}
-.bar-h{display:flex;align-items:center;gap:.5rem;font-size:.71rem;margin-bottom:.45rem}
-.bar-h .bl{flex-shrink:0;width:76px;text-align:right;color:var(--mid)}
-.bar-h .bf{height:18px;border-radius:3px}
-.bar-h .bv{flex-shrink:0;font-weight:700;font-size:.7rem;color:var(--dark);min-width:30px}
-.chart-title{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-bottom:.6rem}
-.p2-wrap{width:100%;background:#eef3f8;display:flex;flex-direction:column;padding:1.25rem;gap:.75rem}
-.bubble-chart-area{flex:1;display:flex;align-items:center;justify-content:center}
-.p3-wrap{width:100%;background:#fff8f6;display:flex;flex-direction:column;padding:1.25rem;gap:.5rem}
+.proj-thumb{background:var(--white);border-radius:12px;overflow:hidden;border:1px solid var(--light);
+  text-decoration:none;color:inherit;display:flex;flex-direction:column;
+  transition:transform .25s,box-shadow .25s;position:relative}
+.proj-thumb:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
 
-.finding-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:1.5rem}
-.finding-card{background:var(--white);border-radius:12px;border:1px solid var(--light);padding:1.25rem;border-top:3px solid var(--accent)}
-.finding-card.red{border-top-color:var(--accent3)}
-.finding-card.blue{border-top-color:var(--accent4)}
-.finding-card .fnum{font-size:1.5rem;font-weight:800;display:block;margin-bottom:.25rem}
-.finding-card .fnum.green{color:var(--accent)}
-.finding-card .fnum.red{color:var(--accent3)}
-.finding-card .fnum.blue{color:var(--accent4)}
-.finding-card p{font-size:.8rem;color:var(--mid)}
+.proj-thumb-visual{height:200px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.pv1{background:linear-gradient(135deg,#1b4f38 0%,#40916c 50%,#74c69d 100%)}
+.pv2{background:linear-gradient(135deg,#1d3a52 0%,#457b9d 50%,#a8d8ea 100%)}
+.pv3{background:linear-gradient(135deg,#7a1c0a 0%,#c0392b 50%,#e76f51 100%)}
 
+.pv-icon{font-size:3rem;opacity:.35;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.pv-label{position:absolute;bottom:0;left:0;right:0;padding:.85rem 1rem;
+  background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;font-size:.72rem;
+  font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+
+.proj-thumb-content{padding:1.35rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column}
+.proj-num{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.4rem}
+.proj-thumb-content h3{font-family:'DM Serif Display',serif;font-size:1.1rem;font-weight:400;line-height:1.3;margin-bottom:.65rem}
+.proj-thumb-content p{font-size:.82rem;color:var(--mid);line-height:1.6;font-weight:300;flex:1}
+.proj-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin:1rem 0 .75rem}
+.tag{display:inline-block;background:var(--bg);border:1px solid var(--light);border-radius:20px;
+  padding:.15rem .6rem;font-size:.7rem;color:var(--mid)}
+.proj-cta{display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;font-weight:600;
+  color:var(--accent);margin-top:auto}
+.proj-cta::after{content:'→';transition:transform .2s}
+.proj-thumb:hover .proj-cta::after{transform:translateX(4px)}
+
+/* ABOUT */
 #about{background:var(--white)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.about-text p{color:var(--mid);font-size:.93rem;margin-bottom:.9rem}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+.about-text p{color:var(--mid);font-size:.92rem;margin-bottom:.9rem;font-weight:300;line-height:1.75}
 .edu-block{margin-top:1.5rem}
-.edu-item{display:flex;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--light)}
-.edu-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:.35rem;flex-shrink:0}
-.edu-item h4{font-size:.9rem;font-weight:700}
-.edu-item span{font-size:.79rem;color:var(--mid)}
+.edu-item{display:flex;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--light)}
+.edu-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);margin-top:.45rem;flex-shrink:0}
+.edu-item h4{font-size:.88rem;font-weight:600;margin-bottom:.2rem}
+.edu-item span{font-size:.77rem;color:var(--mid)}
+.edu-item small{font-size:.73rem;color:#aaa;display:block;margin-top:.2rem}
+
 .skill-row{margin-bottom:.85rem}
-.sk-label{display:flex;justify-content:space-between;font-size:.78rem;color:var(--mid);margin-bottom:.3rem}
-.skill-bar{height:6px;background:var(--light);border-radius:3px;overflow:hidden}
+.sk-label{display:flex;justify-content:space-between;font-size:.77rem;color:var(--mid);margin-bottom:.3rem}
+.skill-bar{height:5px;background:var(--light);border-radius:3px;overflow:hidden}
 .skill-bar-fill{height:100%;border-radius:3px;background:var(--accent)}
 
+.exp-item{display:flex;gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--light)}
+.exp-item h4{font-size:.84rem;font-weight:600;margin-bottom:.15rem}
+.exp-item span{font-size:.75rem;color:var(--mid)}
+
+/* CONTACT */
 #contact{background:var(--dark);color:#fff}
-#contact .section-label{color:var(--accent2)}
+#contact .section-eyebrow{color:var(--accent2)}
 #contact .section-title{color:#fff}
-#contact .section-sub{color:#aaa}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.contact-card{background:#2a2a2a;border-radius:12px;padding:1.5rem;text-align:center}
-.contact-card .icon{font-size:1.8rem;margin-bottom:.75rem}
-.contact-card h4{font-size:.9rem;font-weight:600;margin-bottom:.4rem;color:#ddd}
-.contact-card a{color:var(--accent2);font-size:.82rem;text-decoration:none}
+#contact .section-sub{color:#999}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.contact-card{background:#242424;border-radius:10px;padding:1.5rem;text-align:center;border:1px solid #333}
+.contact-card .icon{font-size:1.6rem;margin-bottom:.75rem}
+.contact-card h4{font-size:.85rem;font-weight:600;margin-bottom:.5rem;color:#ccc}
+.contact-card a{color:var(--accent2);font-size:.8rem;text-decoration:none;display:block;line-height:1.7}
+.contact-card a:hover{text-decoration:underline}
 
-footer{background:#111;color:#555;text-align:center;padding:1.5rem;font-size:.78rem}
+footer{background:#111;color:#444;text-align:center;padding:1.5rem;font-size:.75rem;letter-spacing:.04em}
 
-@media(max-width:768px){
-  .hero-inner,.project-card,.about-grid,.contact-grid,.finding-row{grid-template-columns:1fr}
-  .project-card.flip .proj-visual,.project-card.flip .proj-content{order:unset}
-  .proj-visual{min-height:260px}
+@media(max-width:900px){
+  .hero-inner,.about-grid{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .projects-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="#home">Samuel Nukporfe</a>
@@ -137,13 +147,13 @@ footer{background:#111;color:#555;text-align:center;padding:1.5rem;font-size:.78
 <section id="home">
   <div class="hero-inner">
     <div class="hero-text">
-      <p class="section-label">Urban Informatics · Spatial Equity · Data Analytics</p>
-      <h1>Turning <span>urban data</span> into policy insight.</h1>
+      <p class="hero-eyebrow">Urban Informatics · Spatial Equity · Data Analytics</p>
+      <h1>Turning <em>urban data</em> into policy insight.</h1>
       <p>MS Urban Informatics candidate at Northeastern University (expected Apr 2026). I combine GIS, R, Tableau, and spatial statistics to address questions of housing equity, environmental justice, and public health.</p>
       <a href="#about" class="btn btn-primary">About Me</a>
       <a href="https://drive.google.com/file/d/1v4WyMz-_ut6rZIz8G9Yxc8HfAQtOd-QP/view?usp=drive_link" target="_blank" class="btn btn-outline">Download CV</a>
       <div class="skills-grid">
-        <span class="skill-tag">🗺 Spatial Analysis & GIS</span>
+        <span class="skill-tag">🗺 Spatial Analysis &amp; GIS</span>
         <span class="skill-tag">📊 Data Visualization</span>
         <span class="skill-tag">🤖 Agent-Based Modeling</span>
         <span class="skill-tag">📐 Statistical Analysis</span>
@@ -162,7 +172,7 @@ footer{background:#111;color:#555;text-align:center;padding:1.5rem;font-size:.78
       </div>
       <div class="stat-card t4">
         <span class="num">3.72</span>
-        <span class="lbl">GPA - MS Urban Informatics</span>
+        <span class="lbl">GPA — MS Urban Informatics</span>
       </div>
       <div class="stat-card t5">
         <span class="num">2</span>
@@ -175,54 +185,53 @@ footer{background:#111;color:#555;text-align:center;padding:1.5rem;font-size:.78
 <!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
-    <p class="section-label">Background</p>
+    <p class="section-eyebrow">Background</p>
     <h2 class="section-title">About Me</h2>
     <p class="section-sub">Urban researcher and data analyst bridging spatial methods with equitable policy outcomes.</p>
     <div class="about-grid">
       <div class="about-text">
-        <p>I am a candidate for an MS in Urban Informatics at Northeastern University (GPA 3.72, expected April 2026), with a BA in Social Sciences (Economics & Geography) from the University of Cape Coast, Ghana.</p>
+        <p>I am a candidate for an MS in Urban Informatics at Northeastern University (GPA 3.72, expected April 2026), with a BA in Social Sciences (Economics &amp; Geography) from the University of Cape Coast, Ghana.</p>
         <p>My work sits at the intersection of computational methods and community-centered inquiry. As a <strong>Data Analytics Intern</strong> with the Committee to Repeal the Newton Overnight Parking Ban (2025), I analyzed parking violation records, excise tax data, and Census data to support a municipal ballot initiative. I also collaborated with the <strong>Metropolitan Area Planning Council (MAPC)</strong> on heat protection policy research for Massachusetts renters.</p>
         <p>Earlier in my career I served as a Data Registration Officer and Field Data Officer in Ghana, where I collected biometric data for national ID systems and used GIS mapping software to track city road infrastructure. I am particularly interested in how data methods can surface inequities that traditional planning tools miss.</p>
         <div class="edu-block">
           <div class="edu-item">
             <div class="edu-dot"></div>
             <div>
-              <h4>MS Urban Informatics - Northeastern University</h4>
+              <h4>MS Urban Informatics — Northeastern University</h4>
               <span>Boston, MA · GPA 3.72 · Expected April 2026</span>
-              <p style="font-size:.75rem;color:#aaa;margin-top:.2rem">GIS for Urban/Regional Policy · Big Data for Cities · Computational Statistics · Agent-Based Modeling · Info Design & Visual Analytics · Collecting, Storing & Retrieving Data</p>
+              <small>GIS for Urban/Regional Policy · Big Data for Cities · Computational Statistics · Agent-Based Modeling · Info Design &amp; Visual Analytics</small>
             </div>
           </div>
           <div class="edu-item">
             <div class="edu-dot"></div>
             <div>
-              <h4>BA Social Sciences (Economics & Geography)</h4>
+              <h4>BA Social Sciences (Economics &amp; Geography)</h4>
               <span>University of Cape Coast · Ghana · May 2016</span>
-              <p style="font-size:.75rem;color:#aaa;margin-top:.2rem">Urban Geography · Transport & Space · Geopolitics · Climatology & Hydrology · Micro/Macro Economic Theory</p>
+              <small>Urban Geography · Transport &amp; Space · Geopolitics · Climatology &amp; Hydrology</small>
             </div>
           </div>
         </div>
       </div>
       <div>
-        <h4 style="font-weight:700;margin-bottom:1rem;font-size:.95rem">Technical Skills</h4>
+        <h4 style="font-weight:600;margin-bottom:1.1rem;font-size:.9rem;letter-spacing:.04em">Technical Skills</h4>
         <div class="skill-row"><div class="sk-label"><span>ArcGIS · QGIS · Spatial Analysis</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div></div>
         <div class="skill-row"><div class="sk-label"><span>R (ggplot2, tidyverse, kableExtra)</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div></div>
-        <div class="skill-row"><div class="sk-label"><span>Tableau & Data Visualization</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div></div>
+        <div class="skill-row"><div class="sk-label"><span>Tableau &amp; Data Visualization</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div></div>
         <div class="skill-row"><div class="sk-label"><span>Statistical Analysis (SPSS · R)</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-bar-fill" style="width:82%"></div></div></div>
         <div class="skill-row"><div class="sk-label"><span>Microsoft Excel · PowerPoint</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-bar-fill" style="width:88%"></div></div></div>
         <div class="skill-row"><div class="sk-label"><span>Agent-Based Modeling (NetLogo)</span><span>Familiar</span></div><div class="skill-bar"><div class="skill-bar-fill" style="width:72%"></div></div></div>
-        <div class="skill-row"><div class="sk-label"><span>Canva · Visual Communication</span><span>Proficient</span></div><div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div></div>
-        <h4 style="font-weight:700;margin:1.5rem 0 .75rem;font-size:.95rem">Experience Highlights</h4>
-        <div class="edu-item" style="border-bottom:1px solid var(--light);padding:.6rem 0">
-          <div class="edu-dot" style="background:var(--accent3)"></div>
-          <div><h4 style="font-size:.85rem">Data Analytics Intern - Newton Parking Ban Reform</h4><span>Aug-Nov 2025 · Newton, MA</span></div>
+        <h4 style="font-weight:600;margin:1.6rem 0 .9rem;font-size:.9rem;letter-spacing:.04em">Experience</h4>
+        <div class="exp-item">
+          <div class="edu-dot" style="background:var(--accent3);margin-top:.45rem"></div>
+          <div><h4>Data Analytics Intern — Newton Parking Ban Reform</h4><span>Aug–Nov 2025 · Newton, MA</span></div>
         </div>
-        <div class="edu-item" style="border-bottom:1px solid var(--light);padding:.6rem 0">
-          <div class="edu-dot" style="background:var(--accent4)"></div>
-          <div><h4 style="font-size:.85rem">Asst. Administrative Officer - National ID Authority, Ghana</h4><span>Nov 2020 - Sep 2024 · Accra, Ghana</span></div>
+        <div class="exp-item">
+          <div class="edu-dot" style="background:var(--accent4);margin-top:.45rem"></div>
+          <div><h4>Asst. Administrative Officer — National ID Authority, Ghana</h4><span>Nov 2020–Sep 2024 · Accra, Ghana</span></div>
         </div>
-        <div class="edu-item" style="padding:.6rem 0">
-          <div class="edu-dot" style="background:#aaa"></div>
-          <div><h4 style="font-size:.85rem">Field Data Officer - Dept. of Urban Roads, Ghana</h4><span>Aug-Dec 2018 · Accra, Ghana · GIS mapping of road infrastructure</span></div>
+        <div class="exp-item">
+          <div class="edu-dot" style="background:#bbb;margin-top:.45rem"></div>
+          <div><h4>Field Data Officer — Dept. of Urban Roads, Ghana</h4><span>Aug–Dec 2018 · Accra, Ghana</span></div>
         </div>
       </div>
     </div>
@@ -232,343 +241,59 @@ footer{background:#111;color:#555;text-align:center;padding:1.5rem;font-size:.78
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner">
-    <p class="section-label">Case Studies</p>
+    <p class="section-eyebrow">Case Studies</p>
     <h2 class="section-title">Three Applied Projects</h2>
     <p class="section-sub">Each project follows the same arc: frame a real urban problem, apply rigorous analytical methods, and communicate findings that inform policy.</p>
 
     <div class="projects-grid">
 
-      <!-- PROJECT 1 -->
-      <div class="project-card">
-        <div class="proj-visual">
-          <div class="p1-wrap">
-            <div class="p1-map">
-              <div class="chart-title">Preservation Ratio by Value · Boston Blocks 2024</div>
-              <img src="map1.png" alt="Preservation Ratio by Value - Boston Blocks 2024" style="width:100%;height:auto;border-radius:8px;margin-bottom:.75rem"/>
-              <svg viewBox="0 0 340 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
-                <rect x="155" y="80" width="55" height="42" rx="3" fill="#e76f51" opacity=".9"/>
-                <text x="182" y="97" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">DOWNTOWN</text>
-                <text x="182" y="108" text-anchor="middle" font-size="6" fill="#ffd" opacity=".9">PR: 0.32</text>
-                <rect x="215" y="90" width="55" height="35" rx="3" fill="#e98b6b" opacity=".9"/>
-                <text x="242" y="105" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">SEAPORT</text>
-                <text x="242" y="116" text-anchor="middle" font-size="6" fill="#ffd" opacity=".9">PR: 0.38</text>
-                <rect x="210" y="50" width="50" height="35" rx="3" fill="#efa882" opacity=".9"/>
-                <text x="235" y="66" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">WATERFRONT</text>
-                <text x="235" y="77" text-anchor="middle" font-size="6" fill="#333" opacity=".9">PR: 0.44</text>
-                <rect x="30" y="110" width="65" height="50" rx="3" fill="#2d6a4f" opacity=".9"/>
-                <text x="62" y="132" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">DORCHESTER</text>
-                <text x="62" y="143" text-anchor="middle" font-size="6" fill="#b7e4c7">PR: 0.82</text>
-                <rect x="30" y="165" width="60" height="40" rx="3" fill="#40916c" opacity=".9"/>
-                <text x="60" y="182" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">MATTAPAN</text>
-                <text x="60" y="193" text-anchor="middle" font-size="6" fill="#b7e4c7">PR: 0.79</text>
-                <rect x="96" y="130" width="55" height="45" rx="3" fill="#52b788" opacity=".9"/>
-                <text x="123" y="149" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">ROXBURY</text>
-                <text x="123" y="160" text-anchor="middle" font-size="6" fill="#d8f3dc">PR: 0.76</text>
-                <rect x="30" y="60" width="55" height="45" rx="3" fill="#74c69d" opacity=".9"/>
-                <text x="57" y="80" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">JAMAICA PLAIN</text>
-                <text x="57" y="91" text-anchor="middle" font-size="6" fill="#1b4f38">PR: 0.74</text>
-                <rect x="90" y="70" width="60" height="40" rx="3" fill="#95d5b2" opacity=".9"/>
-                <text x="120" y="87" text-anchor="middle" font-size="6.5" fill="#1b4f38" font-weight="700">BACK BAY</text>
-                <text x="120" y="98" text-anchor="middle" font-size="6" fill="#1b4f38">PR: 0.61</text>
-                <rect x="95" y="165" width="75" height="38" rx="3" fill="#1b4f38" stroke="#f4d03f" stroke-width="2"/>
-                <text x="132" y="181" text-anchor="middle" font-size="6.5" fill="#f4d03f" font-weight="700">★ BLUE HILL AVE</text>
-                <text x="132" y="193" text-anchor="middle" font-size="6" fill="#b7e4c7">PR: 0.748 (exception)</text>
-                <rect x="272" y="110" width="60" height="40" rx="3" fill="#ccc"/>
-                <text x="302" y="128" text-anchor="middle" font-size="6" fill="#888">Insufficient</text>
-                <text x="302" y="138" text-anchor="middle" font-size="6" fill="#888">data (&lt;3 proj.)</text>
-                <rect x="30" y="12" width="280" height="22" rx="4" fill="rgba(255,255,255,.75)"/>
-                <text x="38" y="24" font-size="6.5" fill="#555" font-weight="700">PRESERVATION RATIO:</text>
-                <rect x="130" y="15" width="12" height="12" fill="#2d6a4f" rx="2"/>
-                <text x="145" y="24" font-size="6.5" fill="#555">High (&gt;0.70)</text>
-                <rect x="195" y="15" width="12" height="12" fill="#e76f51" rx="2"/>
-                <text x="210" y="24" font-size="6.5" fill="#555">Low (&lt;0.40)</text>
-                <rect x="258" y="15" width="12" height="12" fill="#ccc" rx="2"/>
-                <text x="273" y="24" font-size="6.5" fill="#555">Gray=excl.</text>
-              </svg>
-            </div>
-            <div class="p1-chart">
-              <div class="chart-title">The Project-Dollar Gap: 2024 Boston</div>
-              <div class="bar-h">
-                <span class="bl">Projects</span>
-                <div class="bf" style="width:92%;background:#2d6a4f;opacity:.85"></div>
-                <span class="bv">92% renovations</span>
-              </div>
-              <div class="bar-h">
-                <span class="bl">Dollars</span>
-                <div class="bf" style="width:49%;background:#e76f51;opacity:.85"></div>
-                <span class="bv">49% to reno.</span>
-              </div>
-              <p style="font-size:.68rem;color:#aaa;margin-top:.4rem">92% of projects are renovations - but only 49% of dollars flow to them. Large redevelopments dominate the money.</p>
-            </div>
-          </div>
+      <a class="proj-thumb" href="project1.html">
+        <div class="proj-thumb-visual pv1">
+          <span class="pv-icon">🏙</span>
+          <div class="pv-label">Parcel-Level GIS · Regression · Housing Policy</div>
         </div>
-        <div class="proj-content">
-          <div>
-            <p class="proj-num">Project 01</p>
-            <h3>Housing Preservation vs. Redevelopment in Boston</h3>
-            <span class="tag">Parcel-Level GIS</span><span class="tag">Regression</span><span class="tag">Community-Based</span><span class="tag">Housing Policy</span>
-            <dl class="proj-meta">
-              <dt>Problem</dt>
-              <dd>When money flows into Boston neighborhoods, does it strengthen homes people already rely on - or replace them? Community partners at the Dudley Street Neighborhood Initiative raised this question directly during workshops.</dd>
-              <dt>Methods</dt>
-              <dd>Constructed a custom <strong>Preservation Ratio</strong> (renovation $ ÷ total investment $) from 691,985 building permits across 2,146 census blocks. Applied hierarchical permit classification, corporate ownership detection, and multivariate regression with an interaction term to test the Blue Hill Avenue corridor specifically.</dd>
-              <dt>Key Finding</dt>
-              <dd>Demographics (race, income, location) do <em>not</em> predict preservation. <strong>Corporate ownership does</strong> - but with a striking reversal on Blue Hill Ave: where corporate owners drive redevelopment citywide (β = -0.329, p &lt; 0.001), the same ownership correlates with <em>higher</em> preservation on Blue Hill (interaction β = +0.926, p &lt; 0.05).</dd>
-              <dt>Policy Implication</dt>
-              <dd>High preservation ratios don't guarantee stability - renovations can displace through rent increases just as effectively as demolition. Policy must address both pathways: not just preventing demolition, but pairing renovation with rent stabilization and affordability covenants.</dd>
-            </dl>
+        <div class="proj-thumb-content">
+          <p class="proj-num">Project 01</p>
+          <h3>Housing Preservation vs. Redevelopment in Boston</h3>
+          <p>When investment flows into Boston neighborhoods, does it strengthen existing homes — or replace them? A custom Preservation Ratio metric applied to 691,985 building permits reveals a striking reversal on Blue Hill Avenue.</p>
+          <div class="proj-tags">
+            <span class="tag">GIS</span><span class="tag">Regression</span><span class="tag">Community-Based</span>
           </div>
-          <div style="display:flex;flex-direction:column;gap:.5rem;margin-top:1rem">
-            <a href="https://nukporfesamuel.github.io/Portfolio/project1.html" target="_blank" class="proj-link">View Full Report →</a>
-            <a href="https://docs.google.com/presentation/d/1dbyFa8qxbp-9kweTbyQq0gHT8KKVTOGR/edit?usp=drive_link&ouid=116444934842006458256&rtpof=true&sd=true" target="_blank" class="proj-link" style="background:#457b9d;color:#fff;border-color:#457b9d">View Presentation →</a>
-            <a href="https://drive.google.com/file/d/1arKPQ0tjE9Y0D_SMsLyv8fliX0yO_Hjx/view?usp=drive_link" target="_blank" class="proj-link" style="background:#2d6a4f;color:#fff;border-color:#2d6a4f">View Community Brief →</a>
-            <p style="font-size:.72rem;color:#aaa;margin-top:.25rem">Community Brief produced collaboratively with Anghela Tamayo, Keegan Veazey & Lillian Zhu as part of the Big Data for Cities course at Northeastern University. Each team member contributed independent analyses of the same Boston building permits dataset.</p>
-          </div>
+          <span class="proj-cta">Read full case study</span>
         </div>
-      </div>
+      </a>
 
-      <!-- Project 1 Headline Findings -->
-      <div style="margin-top:0">
-        <p class="section-label">Project 1 Headline Findings</p>
-        <div class="finding-row">
-          <div class="finding-card">
-            <span class="fnum green">76.7%</span>
-            <p>Mean Preservation Ratio across 2,146 Boston census blocks - but the median is 1.0, revealing strong right-skew. Renovation dominates in count; redevelopment dominates in dollars.</p>
-          </div>
-          <div class="finding-card red">
-            <span class="fnum red">β = -0.329</span>
-            <p>Corporate ownership citywide predicts <em>lower</em> preservation (p &lt; 0.001). A 10pp rise in corporate-owned parcels in a tract predicts a ~3.3pp drop in preservation ratio.</p>
-          </div>
-          <div class="finding-card blue">
-            <span class="fnum blue">β = +0.926</span>
-            <p>On Blue Hill Avenue, the same corporate ownership rise predicts a +5.9pp <em>increase</em> in preservation - a statistically significant reversal of the citywide pattern (p &lt; 0.05).</p>
-          </div>
+      <a class="proj-thumb" href="project2.html">
+        <div class="proj-thumb-visual pv2">
+          <span class="pv-icon">🌳</span>
+          <div class="pv-label">Environmental Justice · Census Data · Spatial Join</div>
         </div>
-      </div>
-
-      <!-- PROJECT 2 -->
-      <div class="project-card flip" id="project2">
-        <div class="proj-content">
-          <div>
-            <p class="proj-num">Project 02</p>
-            <h3>Equitable Access to Green Space in Boston</h3>
-            <span class="tag">Environmental Justice</span><span class="tag">Census Data</span><span class="tag">GIS</span><span class="tag">Spatial Join</span>
-            <dl class="proj-meta">
-              <dt>Problem</dt>
-              <dd>Roxbury and Dorchester have the <em>most</em> parks in Boston - yet their residents are among the least well-served. How can raw park counts mislead, and what does per-capita access reveal?</dd>
-              <dt>Methods</dt>
-              <dd>Spatially joined the City of Boston Parks Dataset to neighborhood boundary layers (WGS 84), then calculated a <strong>parks-per-1,000-residents</strong> metric using 2020 Census data. Visualized as two choropleth maps (Map A: raw count; Map B: per capita) using graduated colors and natural breaks to expose the gap between quantity and access.</dd>
-              <dt>Key Finding</dt>
-              <dd>Roxbury (144 parks) and Dorchester (143) top the raw count - but high population density means residents still experience overcrowding and limited access. Suburban neighborhoods like West Roxbury and Hyde Park score far higher per capita. Downtown, Leather District, and Harbor Islands have <em>zero</em> parks per capita.</dd>
-              <dt>Policy Implication</dt>
-              <dd>Raw park counts are a misleading equity metric. Per-capita access, tied to population density and demographics, should guide capital investment. Priority targets: Leather District, Charlestown, and Downtown for new green space; Roxbury and Dorchester for transit access and infrastructure upgrades.</dd>
-            </dl>
+        <div class="proj-thumb-content">
+          <p class="proj-num">Project 02</p>
+          <h3>Equitable Access to Green Space in Boston</h3>
+          <p>Roxbury and Dorchester have the most parks in Boston — yet their residents are among the least well-served. Per-capita analysis exposes what raw park counts conceal.</p>
+          <div class="proj-tags">
+            <span class="tag">GIS</span><span class="tag">Env. Justice</span><span class="tag">Choropleth</span>
           </div>
-          <a href="https://nukporfesamuel.github.io/Portfolio/project2.html" target="_blank" class="proj-link">View Full Report →</a>
+          <span class="proj-cta">Read full case study</span>
         </div>
-        <div class="proj-visual">
-          <div class="p2-wrap">
-            <div class="chart-title">Parks Per Capita · The Count vs. Access Paradox</div>
-            <div class="bubble-chart-area">
-              <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
-                <text x="150" y="14" text-anchor="middle" font-size="7.5" fill="#457b9d" font-weight="700">RAW COUNT HIGH → per capita LOW</text>
-                <circle cx="72" cy="130" r="36" fill="#e76f51" opacity=".82"/>
-                <text x="72" y="123" text-anchor="middle" font-size="7" fill="#fff" font-weight="700">ROXBURY</text>
-                <text x="72" y="134" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="800">144</text>
-                <text x="72" y="145" text-anchor="middle" font-size="6.5" fill="#fdd" opacity=".9">parks (raw)</text>
-                <text x="72" y="155" text-anchor="middle" font-size="6.5" fill="#fdd">low per capita</text>
-                <circle cx="165" cy="138" r="34" fill="#e98060" opacity=".82"/>
-                <text x="165" y="130" text-anchor="middle" font-size="7" fill="#fff" font-weight="700">DORCHESTER</text>
-                <text x="165" y="141" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="800">143</text>
-                <text x="165" y="152" text-anchor="middle" font-size="6.5" fill="#fdd" opacity=".9">parks (raw)</text>
-                <text x="165" y="162" text-anchor="middle" font-size="6.5" fill="#fdd">overcrowded</text>
-                <circle cx="252" cy="75" r="22" fill="#2d6a4f" opacity=".88"/>
-                <text x="252" y="69" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">W. ROXBURY</text>
-                <text x="252" y="80" text-anchor="middle" font-size="9" fill="#fff" font-weight="800">high</text>
-                <text x="252" y="90" text-anchor="middle" font-size="6.5" fill="#b7e4c7">per capita</text>
-                <circle cx="252" cy="140" r="22" fill="#40916c" opacity=".88"/>
-                <text x="252" y="133" text-anchor="middle" font-size="6" fill="#fff" font-weight="700">HYDE</text>
-                <text x="252" y="143" text-anchor="middle" font-size="6" fill="#fff" font-weight="700">PARK</text>
-                <text x="252" y="153" text-anchor="middle" font-size="9" fill="#fff" font-weight="800">high</text>
-                <rect x="18" y="192" width="64" height="32" rx="4" fill="#1a1a1a" opacity=".75"/>
-                <text x="50" y="206" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">LEATHER DIST.</text>
-                <text x="50" y="217" text-anchor="middle" font-size="8" fill="#f4d03f" font-weight="800">0 parks</text>
-                <rect x="90" y="192" width="64" height="32" rx="4" fill="#1a1a1a" opacity=".75"/>
-                <text x="122" y="206" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">HARBOR ISLANDS</text>
-                <text x="122" y="217" text-anchor="middle" font-size="8" fill="#f4d03f" font-weight="800">0 parks</text>
-                <rect x="162" y="192" width="52" height="32" rx="4" fill="#333" opacity=".75"/>
-                <text x="188" y="206" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">DOWNTOWN</text>
-                <text x="188" y="217" text-anchor="middle" font-size="8" fill="#f4d03f" font-weight="800">≈0 /capita</text>
-                <path d="M105 130 Q135 100 230 82" fill="none" stroke="#457b9d" stroke-width="1.2" stroke-dasharray="3,2"/>
-                <text x="140" y="97" font-size="7" fill="#457b9d" font-style="italic">count ≠ access</text>
-              </svg>
-            </div>
-            <div style="margin-top:.25rem">
-              <div class="chart-title">Raw Count vs. Per-Capita Rank (selected neighborhoods)</div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;font-size:.68rem">
-                <div>
-                  <div style="color:#888;margin-bottom:.3rem;font-weight:700;letter-spacing:.05em">RAW COUNT RANK</div>
-                  <div class="bar-h"><span class="bl" style="width:70px">Roxbury</span><div class="bf" style="width:84%;background:#e76f51"></div><span class="bv">144</span></div>
-                  <div class="bar-h"><span class="bl" style="width:70px">Dorchester</span><div class="bf" style="width:83%;background:#e98060"></div><span class="bv">143</span></div>
-                  <div class="bar-h"><span class="bl" style="width:70px">E. Boston</span><div class="bf" style="width:42%;background:#f5c0a0"></div><span class="bv">61</span></div>
-                  <div class="bar-h"><span class="bl" style="width:70px">Beacon Hill</span><div class="bf" style="width:11%;background:#fde8d8"></div><span class="bv">16</span></div>
-                </div>
-                <div>
-                  <div style="color:#888;margin-bottom:.3rem;font-weight:700;letter-spacing:.05em">PER CAPITA RANK</div>
-                  <div class="bar-h"><span class="bl" style="width:70px">W. Roxbury</span><div class="bf" style="width:90%;background:#2d6a4f"></div><span class="bv">high</span></div>
-                  <div class="bar-h"><span class="bl" style="width:70px">Hyde Park</span><div class="bf" style="width:78%;background:#40916c"></div><span class="bv">high</span></div>
-                  <div class="bar-h"><span class="bl" style="width:70px">Roxbury</span><div class="bf" style="width:22%;background:#e76f51"></div><span class="bv">low</span></div>
-                  <div class="bar-h"><span class="bl" style="width:70px">Downtown</span><div class="bf" style="width:4%;background:#1a1a1a"></div><span class="bv">≈0</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
+      </a>
+
+      <a class="proj-thumb" href="project3.html">
+        <div class="proj-thumb-visual pv3">
+          <span class="pv-icon">🔬</span>
+          <div class="pv-label">R · ggplot2 · Tableau · Public Health</div>
         </div>
-      </div>
-
-      <!-- PROJECT 3 -->
-      <div class="project-card">
-        <div class="proj-visual">
-          <div class="p3-wrap">
-            <!-- Boxplot schematic showing intraregion variability -->
-            <div class="chart-title" style="color:#c0452a">Within-Region Variability · TB Prevalence per 100,000</div>
-            <svg viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" style="width:100%">
-              <rect x="0" y="0" width="280" height="160" fill="#fff8f6" rx="4"/>
-              <!-- Y axis -->
-              <line x1="38" y1="10" x2="38" y2="135" stroke="#ddd" stroke-width="1"/>
-              <text x="35" y="14" text-anchor="end" font-size="6" fill="#aaa">1800</text>
-              <text x="35" y="47" text-anchor="end" font-size="6" fill="#aaa">900</text>
-              <text x="35" y="80" text-anchor="end" font-size="6" fill="#aaa">450</text>
-              <text x="35" y="113" text-anchor="end" font-size="6" fill="#aaa">100</text>
-              <text x="35" y="132" text-anchor="end" font-size="6" fill="#aaa">0</text>
-              <!-- Grid lines -->
-              <line x1="38" y1="14" x2="272" y2="14" stroke="#f0e8e6" stroke-width="1"/>
-              <line x1="38" y1="47" x2="272" y2="47" stroke="#f0e8e6" stroke-width="1"/>
-              <line x1="38" y1="80" x2="272" y2="80" stroke="#f0e8e6" stroke-width="1"/>
-              <line x1="38" y1="113" x2="272" y2="113" stroke="#f0e8e6" stroke-width="1"/>
-              <line x1="38" y1="132" x2="272" y2="132" stroke="#ddd" stroke-width="1"/>
-
-              <!-- AFR boxplot — huge range, high median -->
-              <line x1="58" y1="14" x2="58" y2="132" stroke="#c0392b" stroke-width="1" stroke-dasharray="2,1"/>
-              <rect x="48" y="38" width="20" height="55" fill="#e76f51" opacity=".7" rx="2"/>
-              <line x1="48" y1="70" x2="68" y2="70" stroke="#c0392b" stroke-width="2"/>
-              <text x="58" y="143" text-anchor="middle" font-size="6.5" fill="#555" font-weight="700">AFR</text>
-              <text x="58" y="22" text-anchor="middle" font-size="5.5" fill="#c0392b">max 1762</text>
-
-              <!-- SEA boxplot — high median, moderate spread -->
-              <line x1="103" y1="30" x2="103" y2="115" stroke="#e76f51" stroke-width="1" stroke-dasharray="2,1"/>
-              <rect x="93" y="52" width="20" height="40" fill="#f0a480" opacity=".8" rx="2"/>
-              <line x1="93" y1="65" x2="113" y2="65" stroke="#e76f51" stroke-width="2"/>
-              <text x="103" y="143" text-anchor="middle" font-size="6.5" fill="#555" font-weight="700">SEA</text>
-
-              <!-- WPR boxplot — moderate, wider spread -->
-              <line x1="148" y1="45" x2="148" y2="120" stroke="#f5a623" stroke-width="1" stroke-dasharray="2,1"/>
-              <rect x="138" y="68" width="20" height="35" fill="#f5c842" opacity=".7" rx="2"/>
-              <line x1="138" y1="82" x2="158" y2="82" stroke="#e8a020" stroke-width="2"/>
-              <text x="148" y="143" text-anchor="middle" font-size="6.5" fill="#555" font-weight="700">WPR</text>
-
-              <!-- EMR boxplot — moderate -->
-              <line x1="193" y1="60" x2="193" y2="122" stroke="#aaa" stroke-width="1" stroke-dasharray="2,1"/>
-              <rect x="183" y="78" width="20" height="28" fill="#ccc" opacity=".8" rx="2"/>
-              <line x1="183" y1="90" x2="203" y2="90" stroke="#888" stroke-width="2"/>
-              <text x="193" y="143" text-anchor="middle" font-size="6.5" fill="#555" font-weight="700">EMR</text>
-
-              <!-- AMR boxplot — low, tight -->
-              <line x1="228" y1="110" x2="228" y2="130" stroke="#5ba4cf" stroke-width="1" stroke-dasharray="2,1"/>
-              <rect x="218" y="116" width="20" height="10" fill="#a8c8e8" opacity=".8" rx="2"/>
-              <line x1="218" y1="121" x2="238" y2="121" stroke="#457b9d" stroke-width="2"/>
-              <text x="228" y="143" text-anchor="middle" font-size="6.5" fill="#555" font-weight="700">AMR</text>
-
-              <!-- EUR boxplot — lowest, tightest -->
-              <line x1="263" y1="115" x2="263" y2="130" stroke="#2d6a4f" stroke-width="1" stroke-dasharray="2,1"/>
-              <rect x="253" y="118" width="20" height="8" fill="#74c69d" opacity=".8" rx="2"/>
-              <line x1="253" y1="122" x2="273" y2="122" stroke="#2d6a4f" stroke-width="2"/>
-              <text x="263" y="143" text-anchor="middle" font-size="6.5" fill="#555" font-weight="700">EUR</text>
-
-              <!-- Annotation: Africa's huge spread -->
-              <path d="M68 25 Q85 20 90 28" fill="none" stroke="#c0392b" stroke-width="1" marker-end="url(#a)"/>
-              <text x="91" y="27" font-size="6" fill="#c0392b" font-style="italic">Africa spans 0-1762</text>
-              <text x="91" y="35" font-size="6" fill="#c0392b" font-style="italic">vs. Europe 0-100</text>
-            </svg>
-
-            <!-- Detection rate variability -->
-            <div style="margin-top:.4rem">
-              <div class="chart-title" style="color:#c0452a">Case Detection Rate · Hidden Inequality</div>
-              <svg viewBox="0 0 280 50" xmlns="http://www.w3.org/2000/svg" style="width:100%">
-                <rect x="0" y="0" width="280" height="50" fill="#fff8f6" rx="4"/>
-                <!-- Distribution bar showing spread -->
-                <text x="8" y="14" font-size="6.5" fill="#555" font-weight="700">Detection Rate Distribution (0-100%)</text>
-                <!-- Low end -->
-                <rect x="8" y="20" width="30" height="14" fill="#c0392b" opacity=".8" rx="2"/>
-                <text x="23" y="30" text-anchor="middle" font-size="6" fill="#fff">0-25%</text>
-                <!-- Mid-low -->
-                <rect x="40" y="20" width="40" height="14" fill="#e76f51" opacity=".8" rx="2"/>
-                <text x="60" y="30" text-anchor="middle" font-size="6" fill="#fff">25-50%</text>
-                <!-- Mid -->
-                <rect x="82" y="20" width="50" height="14" fill="#f0a480" opacity=".8" rx="2"/>
-                <text x="107" y="30" text-anchor="middle" font-size="6" fill="#fff">50-75%</text>
-                <!-- High -->
-                <rect x="134" y="20" width="60" height="14" fill="#74c69d" opacity=".8" rx="2"/>
-                <text x="164" y="30" text-anchor="middle" font-size="6" fill="#fff">75-100%</text>
-                <!-- Mean marker -->
-                <line x1="175" y1="18" x2="175" y2="36" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="2,1"/>
-                <text x="177" y="16" font-size="6" fill="#333" font-weight="700">mean 65%</text>
-                <!-- SD annotation -->
-                <text x="8" y="46" font-size="6" fill="#c0392b">SD = 24.8% — some countries detect &lt;10% of cases</text>
-              </svg>
-            </div>
-
-            <!-- Avg bar chart kept but smaller -->
-            <div style="margin-top:.4rem">
-              <div class="chart-title" style="color:#c0452a">Avg TB Prevalence by WHO Region (per 100,000)</div>
-              <div class="bar-h"><span class="bl">S-E Asia</span><div class="bf" style="width:92%;background:#e76f51"></div><span class="bv" style="color:#e76f51">~390</span></div>
-              <div class="bar-h"><span class="bl">Africa</span><div class="bf" style="width:88%;background:#c0392b"></div><span class="bv">~375</span></div>
-              <div class="bar-h"><span class="bl">W. Pacific</span><div class="bf" style="width:55%;background:#f0a480"></div><span class="bv">~230</span></div>
-              <div class="bar-h"><span class="bl">E. Mediter.</span><div class="bf" style="width:40%;background:#f5c0a0"></div><span class="bv">~170</span></div>
-              <div class="bar-h"><span class="bl">Europe</span><div class="bf" style="width:24%;background:#fad4be"></div><span class="bv">~100</span></div>
-              <div class="bar-h"><span class="bl">Americas</span><div class="bf" style="width:21%;background:#fde8d8"></div><span class="bv">~90</span></div>
-            </div>
-
-            <!-- Summary stats -->
-            <div style="margin-top:.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem">
-              <div style="background:#fff;border:1px solid var(--light);border-radius:6px;padding:.5rem;text-align:center">
-                <span style="font-size:.95rem;font-weight:800;color:#c0392b;display:block">231.8</span>
-                <span style="font-size:.65rem;color:#aaa">Mean prevalence<br>per 100k</span>
-              </div>
-              <div style="background:#fff;border:1px solid var(--light);border-radius:6px;padding:.5rem;text-align:center">
-                <span style="font-size:.95rem;font-weight:800;color:#e76f51;display:block">40.1</span>
-                <span style="font-size:.65rem;color:#aaa">Mean HIV+ TB<br>incidence/100k</span>
-              </div>
-              <div style="background:#fff;border:1px solid var(--light);border-radius:6px;padding:.5rem;text-align:center">
-                <span style="font-size:.95rem;font-weight:800;color:#457b9d;display:block">65%</span>
-                <span style="font-size:.65rem;color:#aaa">Mean detection<br>rate (SD=24.8%)</span>
-              </div>
-            </div>
-            <p style="font-size:.68rem;color:#bbb;margin-top:.4rem;text-align:center">Source: Tableau "TB Burden by Country" dataset · Analysis: R (ggplot2) + Tableau</p>
+        <div class="proj-thumb-content">
+          <p class="proj-num">Project 03</p>
+          <h3>TB Burden by Country: Visualizing Global Tuberculosis Trends</h3>
+          <p>Africa's TB range spans 0–1,762 per 100k while Europe stays near 0–100. A hidden detection crisis invisible in regional averages — and why chart type is itself a policy choice.</p>
+          <div class="proj-tags">
+            <span class="tag">R</span><span class="tag">Tableau</span><span class="tag">Public Health</span>
           </div>
+          <span class="proj-cta">Read full case study</span>
         </div>
-        <div class="proj-content">
-          <div>
-            <p class="proj-num">Project 03</p>
-            <h3>TB Burden by Country: Visualizing Global Tuberculosis Trends</h3>
-            <span class="tag">R · ggplot2</span><span class="tag">Tableau</span><span class="tag">Public Health</span><span class="tag">WHO Data</span>
-            <dl class="proj-meta">
-              <dt>Problem</dt>
-              <dd>How does TB burden vary across WHO regions over time - and what is the relationship between prevalence, HIV co-infection, and case detection rates?</dd>
-              <dt>Methods</dt>
-              <dd>Cleaned and analyzed Tableau's public "TB Burden by Country" dataset using R (ggplot2, kableExtra, mosaic). Built a multi-chart analysis: bar charts of average regional prevalence, boxplots of within-region distribution, a histogram of global prevalence skew, a time-series of HIV+ TB incidence (1990-2010), and a scatter plot of prevalence vs. HIV co-infection. Extended analysis with a 6-panel <strong>Tableau Story</strong> covering regional distribution, disparity, co-infection, global trends, and burden relationships.</dd>
-              <dt>Key Finding</dt>
-              <dd>Africa and S-E Asia top average prevalence — but the bigger story is <strong>within-region inequality</strong>: Africa's range spans 0-1,762/100k while Europe stays near 0-100/100k. The mean detection rate of 65% (SD=24.8%) masks countries detecting fewer than 10% of cases — a hidden crisis invisible in regional averages alone.</dd>
-              <dt>Policy Implication</dt>
-              <dd>Visualization choice determines what decision-makers see. Bar charts obscure within-region variation that boxplots reveal; line charts make trend reversals visible that tables hide. Standardizing public health data presentation - choosing chart types deliberately - can change resource allocation priorities.</dd>
-            </dl>
-          </div>
-          <div style="display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem">
-            <a href="https://public.tableau.com/views/project2_17421703361340/Story1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="proj-link" style="background:var(--accent4);color:#fff;border-color:var(--accent4)">View Tableau Story ↗</a>
-            <a href="https://nukporfesamuel.github.io/Portfolio/project3.html" target="_blank" class="proj-link">View R Report →</a>
-          </div>
-        </div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -577,20 +302,20 @@ footer{background:#111;color:#555;text-align:center;padding:1.5rem;font-size:.78
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
-    <p class="section-label">Get in Touch</p>
-    <h2 class="section-title">Contact & CV</h2>
+    <p class="section-eyebrow">Get in Touch</p>
+    <h2 class="section-title">Contact &amp; CV</h2>
     <p class="section-sub">Open to research collaborations, policy work, and data analytics roles in urban planning and spatial equity.</p>
     <div class="contact-grid">
       <div class="contact-card">
         <div class="icon">✉️</div>
         <h4>Email</h4>
-        <a href="mailto:nukporfe.s@northeastern.edu">nukporfe.s@northeastern.edu</a><br>
+        <a href="mailto:nukporfe.s@northeastern.edu">nukporfe.s@northeastern.edu</a>
         <a href="mailto:nukporfesamuel@gmail.com">nukporfesamuel@gmail.com</a>
       </div>
       <div class="contact-card">
         <div class="icon">💼</div>
         <h4>LinkedIn</h4>
-        <a href="https://www.linkedin.com/in/samuel-nukporfe-b33a78123" target="_blank">linkedin.com/in/samuel-nukporfe-b33a78123</a>
+        <a href="https://www.linkedin.com/in/samuel-nukporfe-b33a78123" target="_blank">samuel-nukporfe-b33a78123</a>
       </div>
       <div class="contact-card">
         <div class="icon">📄</div>
