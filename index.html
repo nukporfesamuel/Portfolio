@@ -63,12 +63,13 @@ section{padding:5rem 2rem}
   transition:transform .25s,box-shadow .25s;position:relative}
 .proj-thumb:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
 
-.proj-thumb-visual{height:200px;position:relative;overflow:hidden}
-.proj-thumb-visual img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .4s}
-.proj-thumb:hover .proj-thumb-visual img{transform:scale(1.04)}
-.pv-label{position:absolute;bottom:0;left:0;right:0;padding:.85rem 1rem;
-  background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-size:.72rem;
-  font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.proj-thumb-visual{height:200px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:1.25rem}
+.pv1{background:#1a1a1a}
+.pv2{background:#1a1a1a}
+.pv3{background:#1a1a1a}
+.pv-label{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.pv-num{font-family:'DM Serif Display',serif;font-size:3.5rem;font-weight:400;color:#fff;line-height:1;margin-bottom:.35rem}
+.pv-desc{font-size:.78rem;color:rgba(255,255,255,.6);margin-top:.2rem}
 
 .proj-thumb-content{padding:1.35rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column}
 .proj-num{font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.4rem}
@@ -245,9 +246,10 @@ footer{background:#111;color:#444;text-align:center;padding:1.5rem;font-size:.75
     <div class="projects-grid">
 
       <a class="proj-thumb" href="project1-overview.html">
-        <div class="proj-thumb-visual">
-          <img src="map1.png" alt="Housing Preservation Map Boston"/>
-          <div class="pv-label">Parcel-Level GIS · Regression · Housing Policy</div>
+        <div class="proj-thumb-visual pv1">
+          <div class="pv-label">Housing Policy · Boston</div>
+          <div class="pv-num">76.7%</div>
+          <div class="pv-desc">Mean Preservation Ratio across 2,146 census blocks</div>
         </div>
         <div class="proj-thumb-content">
           <p class="proj-num">Project 01</p>
@@ -261,9 +263,10 @@ footer{background:#111;color:#444;text-align:center;padding:1.5rem;font-size:.75
       </a>
 
       <a class="proj-thumb" href="project2.html" >
-        <div class="proj-thumb-visual">
-          <img src="green_space.jpeg" alt="Parks Per Capita Boston Map"/>
-          <div class="pv-label">Environmental Justice · Census Data · Spatial Join</div>
+        <div class="proj-thumb-visual pv2">
+          <div class="pv-label">Environmental Justice · Boston</div>
+          <div class="pv-num">144</div>
+          <div class="pv-desc">Parks in Roxbury — yet among the lowest per-capita access</div>
         </div>
         <div class="proj-thumb-content">
           <p class="proj-num">Project 02</p>
@@ -277,9 +280,10 @@ footer{background:#111;color:#444;text-align:center;padding:1.5rem;font-size:.75
       </a>
 
       <a class="proj-thumb" href="project3-overview.html">
-        <div class="proj-thumb-visual">
-          <img src="tb_chart.png" alt="TB Prevalence by WHO Region Boxplot"/>
-          <div class="pv-label">R · ggplot2 · Tableau · Public Health</div>
+        <div class="proj-thumb-visual pv3">
+          <div class="pv-label">Public Health · WHO Data</div>
+          <div class="pv-num">65%</div>
+          <div class="pv-desc">Mean TB detection rate — some countries below 10%</div>
         </div>
         <div class="proj-thumb-content">
           <p class="proj-num">Project 03</p>
