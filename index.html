@@ -63,14 +63,11 @@ section{padding:5rem 2rem}
   transition:transform .25s,box-shadow .25s;position:relative}
 .proj-thumb:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
 
-.proj-thumb-visual{height:200px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.pv1{background:linear-gradient(135deg,#1b4f38 0%,#40916c 50%,#74c69d 100%)}
-.pv2{background:linear-gradient(135deg,#1d3a52 0%,#457b9d 50%,#a8d8ea 100%)}
-.pv3{background:linear-gradient(135deg,#7a1c0a 0%,#c0392b 50%,#e76f51 100%)}
-
-.pv-icon{font-size:3rem;opacity:.35;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.proj-thumb-visual{height:200px;position:relative;overflow:hidden}
+.proj-thumb-visual img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .4s}
+.proj-thumb:hover .proj-thumb-visual img{transform:scale(1.04)}
 .pv-label{position:absolute;bottom:0;left:0;right:0;padding:.85rem 1rem;
-  background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;font-size:.72rem;
+  background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-size:.72rem;
   font-weight:600;letter-spacing:.1em;text-transform:uppercase}
 
 .proj-thumb-content{padding:1.35rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column}
@@ -248,8 +245,8 @@ footer{background:#111;color:#444;text-align:center;padding:1.5rem;font-size:.75
     <div class="projects-grid">
 
       <a class="proj-thumb" href="project1-overview.html">
-        <div class="proj-thumb-visual pv1">
-          <span class="pv-icon">🏙</span>
+        <div class="proj-thumb-visual">
+          <img src="map1.png" alt="Housing Preservation Map Boston"/>
           <div class="pv-label">Parcel-Level GIS · Regression · Housing Policy</div>
         </div>
         <div class="proj-thumb-content">
@@ -264,8 +261,8 @@ footer{background:#111;color:#444;text-align:center;padding:1.5rem;font-size:.75
       </a>
 
       <a class="proj-thumb" href="project2.html" >
-        <div class="proj-thumb-visual pv2">
-          <span class="pv-icon">🌳</span>
+        <div class="proj-thumb-visual">
+          <img src="green_space.jpeg" alt="Parks Per Capita Boston Map"/>
           <div class="pv-label">Environmental Justice · Census Data · Spatial Join</div>
         </div>
         <div class="proj-thumb-content">
@@ -280,8 +277,8 @@ footer{background:#111;color:#444;text-align:center;padding:1.5rem;font-size:.75
       </a>
 
       <a class="proj-thumb" href="project3-overview.html">
-        <div class="proj-thumb-visual pv3">
-          <span class="pv-icon">🔬</span>
+        <div class="proj-thumb-visual">
+          <img src="tb_chart.png" alt="TB Prevalence by WHO Region Boxplot"/>
           <div class="pv-label">R · ggplot2 · Tableau · Public Health</div>
         </div>
         <div class="proj-thumb-content">
