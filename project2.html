@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Project 03: TB Burden by Country | Samuel Nukporfe</title>
+<title>Project 02: Equitable Access to Green Space | Samuel Nukporfe</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#f9f8f6;--white:#fff;--dark:#1a1a1a;--mid:#666;--light:#e8e6e1;--accent:#c0392b;--accent2:#e8a09a;--accent3:#457b9d;--accent-green:#2d6a4f;}
+:root{--bg:#f9f8f6;--white:#fff;--dark:#1a1a1a;--mid:#666;--light:#e8e6e1;--accent:#457b9d;--accent2:#a8d8ea;--accent3:#e76f51;--accent-green:#2d6a4f;}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
 nav{position:fixed;top:0;width:100%;background:rgba(249,248,246,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--light);z-index:100;padding:0 2rem}
 .nav-inner{max-width:900px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px}
 .nav-logo{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--dark);text-decoration:none}
 .nav-back{font-size:.82rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s}
 .nav-back:hover{color:var(--accent)}
-.hero{background:linear-gradient(135deg,#5c0f07 0%,#c0392b 100%);color:#fff;padding:120px 2rem 50px}
+.hero{background:linear-gradient(135deg,#1d3a52 0%,#457b9d 100%);color:#fff;padding:120px 2rem 50px}
 .hero-inner{max-width:900px;margin:auto}
 .eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);margin-bottom:.9rem}
 .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:400;line-height:1.1;margin-bottom:1rem;max-width:680px}
@@ -25,9 +25,9 @@ nav{position:fixed;top:0;width:100%;background:rgba(249,248,246,.96);backdrop-fi
 .overview p{color:var(--mid);font-size:.93rem;line-height:1.8;font-weight:300;margin-bottom:.8rem}
 .highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0 3rem}
 .hl{background:var(--white);border-radius:10px;border:1px solid var(--light);padding:1.25rem;text-align:center}
-.hl.red{border-top:3px solid var(--accent)}.hl.blue{border-top:3px solid var(--accent3)}.hl.green{border-top:3px solid var(--accent-green)}
+.hl.blue{border-top:3px solid var(--accent)}.hl.red{border-top:3px solid var(--accent3)}.hl.green{border-top:3px solid var(--accent-green)}
 .hl .num{font-family:'DM Serif Display',serif;font-size:1.75rem;display:block;margin-bottom:.3rem}
-.hl.red .num{color:var(--accent)}.hl.blue .num{color:var(--accent3)}.hl.green .num{color:var(--accent-green)}
+.hl.blue .num{color:var(--accent)}.hl.red .num{color:var(--accent3)}.hl.green .num{color:var(--accent-green)}
 .hl p{font-size:.78rem;color:var(--mid);line-height:1.5;margin:0}
 .docs-section h2{font-family:'DM Serif Display',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem}
 .doc-list{display:flex;flex-direction:column;gap:.85rem}
@@ -57,13 +57,13 @@ nav{position:fixed;top:0;width:100%;background:rgba(249,248,246,.96);backdrop-fi
 
 <div class="hero">
   <div class="hero-inner">
-    <p class="eyebrow">Project 03 · Information Design &amp; Visual Analytics · Northeastern University</p>
-    <h1>TB Burden by Country: Visualizing Global Tuberculosis Trends</h1>
+    <p class="eyebrow">Project 02 · GIS for Urban &amp; Regional Policy · Northeastern University</p>
+    <h1>Equitable Access to Green Space in Boston</h1>
     <div style="margin-top:.75rem">
-      <span class="tag">R · ggplot2</span>
-      <span class="tag">Tableau</span>
-      <span class="tag">Public Health</span>
-      <span class="tag">WHO Data</span>
+      <span class="tag">Environmental Justice</span>
+      <span class="tag">Census Data</span>
+      <span class="tag">GIS / Spatial Join</span>
+      <span class="tag">Choropleth Mapping</span>
     </div>
   </div>
 </div>
@@ -71,30 +71,23 @@ nav{position:fixed;top:0;width:100%;background:rgba(249,248,246,.96);backdrop-fi
 <div class="body">
   <div class="overview" style="margin-bottom:3rem">
     <h2>Overview</h2>
-    <p>This project analyzed the Tableau "TB Burden by Country" dataset using R (ggplot2, kableExtra, mosaic) and Tableau to examine how TB burden varies across WHO regions — and how the choice of chart type determines what decision-makers can see.</p>
-    <p>Africa and South-East Asia lead in average prevalence, but the more revealing finding is <strong>within-region inequality</strong>: Africa's TB range spans 0–1,762 per 100,000 while Europe stays near 0–100. A mean case detection rate of 65% (SD = 24.8%) masks countries detecting fewer than 10% of cases — a hidden crisis invisible in regional bar charts alone. The project also includes a 6-panel Tableau Story covering regional distribution, co-infection trends, and burden relationships over time.</p>
+    <p>Roxbury and Dorchester rank first and second in Boston for raw park count — yet their residents face significant green space inequities. This project exposed that paradox by shifting from raw park counts to a <strong>parks-per-1,000-residents</strong> metric using 2020 Census data, spatially joined to neighborhood boundaries in ArcGIS.</p>
+    <p>The two choropleth maps — one showing raw counts, one showing per-capita access — tell opposite stories about the same city, revealing that standard metrics systematically misidentify which communities need investment. Downtown, Leather District, and Harbor Islands have effectively zero parks per capita yet are invisible in raw count analyses.</p>
   </div>
 
   <div class="highlights">
-    <div class="hl red"><span class="num">231.8</span><p>Mean TB prevalence per 100,000 globally</p></div>
-    <div class="hl blue"><span class="num">65%</span><p>Mean case detection rate (SD = 24.8%) — some countries below 10%</p></div>
-    <div class="hl green"><span class="num">1,762</span><p>Max TB prevalence per 100k in Africa vs. ~100 in Europe</p></div>
+    <div class="hl red"><span class="num">144</span><p>Parks in Roxbury — highest raw count in Boston, yet among the lowest per-capita access</p></div>
+    <div class="hl green"><span class="num">High</span><p>Per-capita rank for West Roxbury and Hyde Park — invisible in raw count rankings</p></div>
+    <div class="hl blue"><span class="num">0</span><p>Parks per capita in Leather District, Harbor Islands, and Downtown</p></div>
   </div>
 
   <div class="docs-section">
     <h2>Project Documents</h2>
     <div class="doc-list">
-      <a class="doc-link" href="https://public.tableau.com/views/project2_17421703361340/Story1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">
-        <div class="doc-link-left">
-          <span class="doc-icon">📊</span>
-          <div class="doc-info"><h4>Tableau Story</h4><span>6-panel interactive story: regional distribution, disparity, co-infection, trends</span></div>
-        </div>
-        <span class="doc-arrow">→</span>
-      </a>
-      <a class="doc-link" href="https://nukporfesamuel.github.io/Portfolio/project3.html" target="_blank">
+      <a class="doc-link" href="https://nukporfesamuel.github.io/Portfolio/project2.html" target="_blank">
         <div class="doc-link-left">
           <span class="doc-icon">📄</span>
-          <div class="doc-info"><h4>R Analysis Report</h4><span>Full R code, ggplot2 visualizations, and written findings</span></div>
+          <div class="doc-info"><h4>Full Report &amp; Maps</h4><span>Choropleth maps, methodology, and full findings</span></div>
         </div>
         <span class="doc-arrow">→</span>
       </a>
@@ -104,8 +97,8 @@ nav{position:fixed;top:0;width:100%;background:rgba(249,248,246,.96);backdrop-fi
 
 <div class="proj-nav">
   <div class="proj-nav-inner">
-    <div><div class="lbl">← Previous</div><a href="project2.html">Equitable Access to Green Space</a></div>
-    <div class="right"><div class="lbl">Back to</div><a href="index.html#projects">All projects →</a></div>
+    <div><div class="lbl">← Previous</div><a href="project1.html">Housing Preservation vs. Redevelopment</a></div>
+    <div class="right"><div class="lbl">Next →</div><a href="project3.html">TB Burden by Country</a></div>
   </div>
 </div>
 </body>
