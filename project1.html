@@ -11,41 +11,66 @@
 :root{--bg:#f9f8f6;--white:#fff;--dark:#1a1a1a;--mid:#666;--light:#e8e6e1;--accent:#2d6a4f;--accent2:#74c69d;--accent3:#e76f51;--accent4:#457b9d;}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
 nav{position:fixed;top:0;width:100%;background:rgba(249,248,246,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--light);z-index:100;padding:0 2rem}
-.nav-inner{max-width:900px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-inner{max-width:960px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px}
 .nav-logo{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--dark);text-decoration:none}
 .nav-back{font-size:.82rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s}
 .nav-back:hover{color:var(--accent)}
 .hero{background:linear-gradient(135deg,#1b4f38 0%,#40916c 100%);color:#fff;padding:120px 2rem 50px}
-.hero-inner{max-width:900px;margin:auto}
+.hero-inner{max-width:960px;margin:auto}
 .eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);margin-bottom:.9rem}
-.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:400;line-height:1.1;margin-bottom:1rem;max-width:680px}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:400;line-height:1.1;margin-bottom:1rem;max-width:700px}
 .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:.2rem .75rem;font-size:.72rem;color:rgba(255,255,255,.9);margin:.2rem .2rem 0 0}
-.body{max-width:900px;margin:0 auto;padding:3.5rem 2rem 5rem}
-.overview h2{font-family:'DM Serif Display',serif;font-size:1.5rem;font-weight:400;margin-bottom:.8rem}
-.overview p{color:var(--mid);font-size:.93rem;line-height:1.8;font-weight:300;margin-bottom:.8rem}
-.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0 3rem}
-.hl{background:var(--white);border-radius:10px;border:1px solid var(--light);padding:1.25rem;text-align:center}
-.hl.green{border-top:3px solid var(--accent)}.hl.red{border-top:3px solid var(--accent3)}.hl.blue{border-top:3px solid var(--accent4)}
-.hl .num{font-family:'DM Serif Display',serif;font-size:1.75rem;display:block;margin-bottom:.3rem}
-.hl.green .num{color:var(--accent)}.hl.red .num{color:var(--accent3)}.hl.blue .num{color:var(--accent4)}
-.hl p{font-size:.78rem;color:var(--mid);line-height:1.5;margin:0}
-.docs-section h2{font-family:'DM Serif Display',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem}
-.doc-list{display:flex;flex-direction:column;gap:.85rem}
-.doc-link{display:flex;align-items:center;justify-content:space-between;background:var(--white);border:1px solid var(--light);border-radius:10px;padding:1.1rem 1.4rem;text-decoration:none;color:var(--dark);transition:box-shadow .2s,border-color .2s}
+.body{max-width:960px;margin:0 auto;padding:3.5rem 2rem 5rem}
+
+/* findings */
+.finding-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin:2rem 0 3rem}
+.finding-card{background:var(--white);border-radius:12px;border:1px solid var(--light);padding:1.25rem;border-top:3px solid var(--accent)}
+.finding-card.red{border-top-color:var(--accent3)}
+.finding-card.blue{border-top-color:var(--accent4)}
+.finding-card .fnum{font-size:1.5rem;font-weight:800;display:block;margin-bottom:.25rem}
+.finding-card .fnum.green{color:var(--accent)}
+.finding-card .fnum.red{color:var(--accent3)}
+.finding-card .fnum.blue{color:var(--accent4)}
+.finding-card p{font-size:.8rem;color:var(--mid)}
+
+/* viz panels */
+.viz-wrap{background:var(--white);border-radius:14px;border:1px solid var(--light);overflow:hidden;margin-bottom:2rem}
+.viz-inner{padding:1.25rem;background:#f4f7f4}
+.chart-title{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-bottom:.75rem}
+.bar-h{display:flex;align-items:center;gap:.5rem;font-size:.75rem;margin-bottom:.5rem}
+.bar-h .bl{flex-shrink:0;width:80px;text-align:right;color:var(--mid);font-size:.72rem}
+.bar-h .bf{height:20px;border-radius:3px}
+.bar-h .bv{flex-shrink:0;font-weight:700;font-size:.72rem;color:var(--dark);min-width:50px}
+.chart-panel{background:#fff;padding:1rem 1.25rem;border-top:1px solid var(--light)}
+
+/* meta */
+.proj-meta{margin:2rem 0}
+.proj-meta dt{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:1rem}
+.proj-meta dd{font-size:.88rem;color:var(--mid);margin-top:.25rem;line-height:1.7;font-weight:300}
+
+/* doc links */
+.docs-section{margin-top:3rem}
+.docs-section h2{font-family:'DM Serif Display',serif;font-size:1.4rem;font-weight:400;margin-bottom:1.1rem}
+.doc-list{display:flex;flex-direction:column;gap:.75rem}
+.doc-link{display:flex;align-items:center;justify-content:space-between;background:var(--white);border:1px solid var(--light);border-radius:10px;padding:1rem 1.25rem;text-decoration:none;color:var(--dark);transition:box-shadow .2s,border-color .2s}
 .doc-link:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);border-color:var(--accent)}
-.doc-link-left{display:flex;align-items:center;gap:1rem}
-.doc-icon{font-size:1.4rem}
-.doc-info h4{font-size:.9rem;font-weight:600;margin-bottom:.15rem}
-.doc-info span{font-size:.78rem;color:var(--mid)}
+.doc-link-left{display:flex;align-items:center;gap:.9rem}
+.doc-icon{font-size:1.3rem}
+.doc-info h4{font-size:.88rem;font-weight:600;margin-bottom:.1rem}
+.doc-info span{font-size:.76rem;color:var(--mid)}
 .doc-arrow{font-size:.85rem;color:var(--accent);font-weight:700}
-.collab-note{background:var(--white);border:1px solid var(--light);border-radius:10px;padding:1.1rem 1.4rem;margin-top:2rem;font-size:.8rem;color:var(--mid);line-height:1.65}
+.collab-note{margin-top:1rem;font-size:.78rem;color:var(--mid);line-height:1.65;font-weight:300}
+
 .proj-nav{background:var(--dark);padding:2rem}
-.proj-nav-inner{max-width:900px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+.proj-nav-inner{max-width:960px;margin:auto;display:flex;justify-content:space-between;align-items:center}
 .proj-nav a{color:#999;text-decoration:none;font-size:.82rem;font-weight:500;transition:color .2s}
 .proj-nav a:hover{color:#fff}
 .proj-nav .right{text-align:right}
 .proj-nav .lbl{font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:#555;margin-bottom:.25rem}
-@media(max-width:700px){.highlights{grid-template-columns:1fr}}
+
+h2.section{font-family:'DM Serif Display',serif;font-size:1.4rem;font-weight:400;margin-bottom:1rem;margin-top:2.5rem}
+
+@media(max-width:700px){.finding-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -62,53 +87,123 @@ nav{position:fixed;top:0;width:100%;background:rgba(249,248,246,.96);backdrop-fi
     <h1>Housing Preservation vs. Redevelopment in Boston</h1>
     <div style="margin-top:.75rem">
       <span class="tag">Parcel-Level GIS</span>
-      <span class="tag">Multivariate Regression</span>
-      <span class="tag">Community-Based Research</span>
+      <span class="tag">Regression</span>
+      <span class="tag">Community-Based</span>
       <span class="tag">Housing Policy</span>
     </div>
   </div>
 </div>
 
 <div class="body">
-  <div class="overview" style="margin-bottom:3rem">
-    <h2>Overview</h2>
-    <p>When investment flows into Boston neighborhoods, does it strengthen homes that residents already rely on — or replace them? This question was raised by community partners at the <strong>Dudley Street Neighborhood Initiative (DSNI)</strong> during participatory workshops in Roxbury.</p>
-    <p>To answer it, I constructed a custom <strong>Preservation Ratio</strong> (renovation investment ÷ total investment) from 691,985 building permits across 2,146 census blocks (2006–2024). Multivariate regression revealed that demographics do not predict preservation — but corporate ownership does, with a striking spatial reversal on Blue Hill Avenue likely driven by Community Development Corporations.</p>
+
+  <dl class="proj-meta">
+    <dt>Problem</dt>
+    <dd>When money flows into Boston neighborhoods, does it strengthen homes people already rely on — or replace them? Community partners at the Dudley Street Neighborhood Initiative raised this question directly during workshops.</dd>
+    <dt>Methods</dt>
+    <dd>Constructed a custom <strong>Preservation Ratio</strong> (renovation $ ÷ total investment $) from 691,985 building permits across 2,146 census blocks. Applied hierarchical permit classification, corporate ownership detection, and multivariate regression with an interaction term to test the Blue Hill Avenue corridor specifically.</dd>
+    <dt>Key Finding</dt>
+    <dd>Demographics (race, income, location) do <em>not</em> predict preservation. <strong>Corporate ownership does</strong> — but with a striking reversal on Blue Hill Ave: where corporate owners drive redevelopment citywide (β = −0.329, p &lt; 0.001), the same ownership correlates with <em>higher</em> preservation on Blue Hill (interaction β = +0.926, p &lt; 0.05).</dd>
+    <dt>Policy Implication</dt>
+    <dd>High preservation ratios don't guarantee stability — renovations can displace through rent increases just as effectively as demolition. Policy must address both pathways: pairing renovation with rent stabilization and affordability covenants.</dd>
+  </dl>
+
+  <!-- HEADLINE FINDINGS -->
+  <h2 class="section">Headline Findings</h2>
+  <div class="finding-row">
+    <div class="finding-card">
+      <span class="fnum green">76.7%</span>
+      <p>Mean Preservation Ratio across 2,146 Boston census blocks — but the median is 1.0, revealing strong right-skew. Renovation dominates in count; redevelopment dominates in dollars.</p>
+    </div>
+    <div class="finding-card red">
+      <span class="fnum red">β = −0.329</span>
+      <p>Corporate ownership citywide predicts <em>lower</em> preservation (p &lt; 0.001). A 10pp rise in corporate-owned parcels predicts a ~3.3pp drop in preservation ratio.</p>
+    </div>
+    <div class="finding-card blue">
+      <span class="fnum blue">β = +0.926</span>
+      <p>On Blue Hill Avenue, the same corporate ownership rise predicts a +5.9pp <em>increase</em> in preservation — a statistically significant reversal of the citywide pattern (p &lt; 0.05).</p>
+    </div>
   </div>
 
-  <div class="highlights">
-    <div class="hl green"><span class="num">76.7%</span><p>Mean Preservation Ratio — but median is 1.0, revealing strong right-skew</p></div>
-    <div class="hl red"><span class="num">β = −0.329</span><p>Corporate ownership predicts lower preservation citywide (p &lt; 0.001)</p></div>
-    <div class="hl blue"><span class="num">β = +0.926</span><p>Blue Hill Ave interaction reverses that effect (p &lt; 0.05)</p></div>
+  <!-- MAP + SVG VIZ -->
+  <h2 class="section">Visualizations</h2>
+  <div class="viz-wrap">
+    <div class="viz-inner">
+      <div class="chart-title">Preservation Ratio by Value · Boston Blocks 2024</div>
+      <img src="map1.png" alt="Preservation Ratio by Value - Boston Blocks 2024" style="width:100%;height:auto;border-radius:8px;margin-bottom:.75rem"/>
+      <svg viewBox="0 0 340 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+        <rect x="155" y="80" width="55" height="42" rx="3" fill="#e76f51" opacity=".9"/>
+        <text x="182" y="97" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">DOWNTOWN</text>
+        <text x="182" y="108" text-anchor="middle" font-size="6" fill="#ffd" opacity=".9">PR: 0.32</text>
+        <rect x="215" y="90" width="55" height="35" rx="3" fill="#e98b6b" opacity=".9"/>
+        <text x="242" y="105" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">SEAPORT</text>
+        <text x="242" y="116" text-anchor="middle" font-size="6" fill="#ffd" opacity=".9">PR: 0.38</text>
+        <rect x="210" y="50" width="50" height="35" rx="3" fill="#efa882" opacity=".9"/>
+        <text x="235" y="66" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">WATERFRONT</text>
+        <text x="235" y="77" text-anchor="middle" font-size="6" fill="#333" opacity=".9">PR: 0.44</text>
+        <rect x="30" y="110" width="65" height="50" rx="3" fill="#2d6a4f" opacity=".9"/>
+        <text x="62" y="132" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">DORCHESTER</text>
+        <text x="62" y="143" text-anchor="middle" font-size="6" fill="#b7e4c7">PR: 0.82</text>
+        <rect x="30" y="165" width="60" height="40" rx="3" fill="#40916c" opacity=".9"/>
+        <text x="60" y="182" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">MATTAPAN</text>
+        <text x="60" y="193" text-anchor="middle" font-size="6" fill="#b7e4c7">PR: 0.79</text>
+        <rect x="96" y="130" width="55" height="45" rx="3" fill="#52b788" opacity=".9"/>
+        <text x="123" y="149" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">ROXBURY</text>
+        <text x="123" y="160" text-anchor="middle" font-size="6" fill="#d8f3dc">PR: 0.76</text>
+        <rect x="30" y="60" width="55" height="45" rx="3" fill="#74c69d" opacity=".9"/>
+        <text x="57" y="80" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">JAMAICA PLAIN</text>
+        <text x="57" y="91" text-anchor="middle" font-size="6" fill="#1b4f38">PR: 0.74</text>
+        <rect x="90" y="70" width="60" height="40" rx="3" fill="#95d5b2" opacity=".9"/>
+        <text x="120" y="87" text-anchor="middle" font-size="6.5" fill="#1b4f38" font-weight="700">BACK BAY</text>
+        <text x="120" y="98" text-anchor="middle" font-size="6" fill="#1b4f38">PR: 0.61</text>
+        <rect x="95" y="165" width="75" height="38" rx="3" fill="#1b4f38" stroke="#f4d03f" stroke-width="2"/>
+        <text x="132" y="181" text-anchor="middle" font-size="6.5" fill="#f4d03f" font-weight="700">★ BLUE HILL AVE</text>
+        <text x="132" y="193" text-anchor="middle" font-size="6" fill="#b7e4c7">PR: 0.748 (exception)</text>
+        <rect x="30" y="12" width="280" height="22" rx="4" fill="rgba(255,255,255,.75)"/>
+        <text x="38" y="24" font-size="6.5" fill="#555" font-weight="700">PRESERVATION RATIO:</text>
+        <rect x="130" y="15" width="12" height="12" fill="#2d6a4f" rx="2"/>
+        <text x="145" y="24" font-size="6.5" fill="#555">High (&gt;0.70)</text>
+        <rect x="195" y="15" width="12" height="12" fill="#e76f51" rx="2"/>
+        <text x="210" y="24" font-size="6.5" fill="#555">Low (&lt;0.40)</text>
+        <rect x="258" y="15" width="12" height="12" fill="#ccc" rx="2"/>
+        <text x="273" y="24" font-size="6.5" fill="#555">Gray=excl.</text>
+      </svg>
+    </div>
+    <div class="chart-panel">
+      <div class="chart-title">The Project-Dollar Gap · 2024 Boston</div>
+      <div class="bar-h">
+        <span class="bl">By Projects</span>
+        <div class="bf" style="width:88%;background:#2d6a4f;opacity:.85"></div>
+        <span class="bv">92% renovations</span>
+      </div>
+      <div class="bar-h">
+        <span class="bl">By Dollars</span>
+        <div class="bf" style="width:47%;background:#e76f51;opacity:.85"></div>
+        <span class="bv">49% to reno.</span>
+      </div>
+      <p style="font-size:.75rem;color:#aaa;margin-top:.5rem">92% of projects are renovations — but only 49% of dollars flow to them. Large redevelopments dominate the money.</p>
+    </div>
   </div>
 
+  <!-- DOC LINKS -->
   <div class="docs-section">
     <h2>Project Documents</h2>
     <div class="doc-list">
       <a class="doc-link" href="https://nukporfesamuel.github.io/Portfolio/project1.html" target="_blank">
-        <div class="doc-link-left">
-          <span class="doc-icon">📄</span>
-          <div class="doc-info"><h4>Full R Analysis Report</h4><span>Complete statistical analysis, regression outputs, and visualizations</span></div>
-        </div>
+        <div class="doc-link-left"><span class="doc-icon">📄</span><div class="doc-info"><h4>Full R Analysis Report</h4><span>Complete statistical analysis, regression outputs, and visualizations</span></div></div>
         <span class="doc-arrow">→</span>
       </a>
       <a class="doc-link" href="https://docs.google.com/presentation/d/1dbyFa8qxbp-9kweTbyQq0gHT8KKVTOGR/edit?usp=drive_link&ouid=116444934842006458256&rtpof=true&sd=true" target="_blank">
-        <div class="doc-link-left">
-          <span class="doc-icon">📊</span>
-          <div class="doc-info"><h4>Presentation Slides</h4><span>Summary presentation of methods and findings</span></div>
-        </div>
+        <div class="doc-link-left"><span class="doc-icon">📊</span><div class="doc-info"><h4>Presentation Slides</h4><span>Summary presentation of methods and findings</span></div></div>
         <span class="doc-arrow">→</span>
       </a>
       <a class="doc-link" href="https://drive.google.com/file/d/1arKPQ0tjE9Y0D_SMsLyv8fliX0yO_Hjx/view?usp=drive_link" target="_blank">
-        <div class="doc-link-left">
-          <span class="doc-icon">🏘</span>
-          <div class="doc-info"><h4>Community Brief</h4><span>Non-technical summary produced for DSNI and community partners</span></div>
-        </div>
+        <div class="doc-link-left"><span class="doc-icon">🏘</span><div class="doc-info"><h4>Community Brief</h4><span>Non-technical summary produced for DSNI and community partners</span></div></div>
         <span class="doc-arrow">→</span>
       </a>
     </div>
     <p class="collab-note">Community brief produced collaboratively with Anghela Tamayo, Keegan Veazey &amp; Lillian Zhu as part of the Big Data for Cities course at Northeastern University.</p>
   </div>
+
 </div>
 
 <div class="proj-nav">

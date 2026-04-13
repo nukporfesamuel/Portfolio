@@ -11,40 +11,50 @@
 :root{--bg:#f9f8f6;--white:#fff;--dark:#1a1a1a;--mid:#666;--light:#e8e6e1;--accent:#457b9d;--accent2:#a8d8ea;--accent3:#e76f51;--accent-green:#2d6a4f;}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
 nav{position:fixed;top:0;width:100%;background:rgba(249,248,246,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--light);z-index:100;padding:0 2rem}
-.nav-inner{max-width:900px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-inner{max-width:960px;margin:auto;display:flex;align-items:center;justify-content:space-between;height:56px}
 .nav-logo{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--dark);text-decoration:none}
 .nav-back{font-size:.82rem;font-weight:500;color:var(--mid);text-decoration:none;transition:color .2s}
 .nav-back:hover{color:var(--accent)}
 .hero{background:linear-gradient(135deg,#1d3a52 0%,#457b9d 100%);color:#fff;padding:120px 2rem 50px}
-.hero-inner{max-width:900px;margin:auto}
+.hero-inner{max-width:960px;margin:auto}
 .eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);margin-bottom:.9rem}
-.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:400;line-height:1.1;margin-bottom:1rem;max-width:680px}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,4vw,3rem);font-weight:400;line-height:1.1;margin-bottom:1rem;max-width:700px}
 .tag{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:.2rem .75rem;font-size:.72rem;color:rgba(255,255,255,.9);margin:.2rem .2rem 0 0}
-.body{max-width:900px;margin:0 auto;padding:3.5rem 2rem 5rem}
-.overview h2{font-family:'DM Serif Display',serif;font-size:1.5rem;font-weight:400;margin-bottom:.8rem}
-.overview p{color:var(--mid);font-size:.93rem;line-height:1.8;font-weight:300;margin-bottom:.8rem}
-.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0 3rem}
-.hl{background:var(--white);border-radius:10px;border:1px solid var(--light);padding:1.25rem;text-align:center}
-.hl.blue{border-top:3px solid var(--accent)}.hl.red{border-top:3px solid var(--accent3)}.hl.green{border-top:3px solid var(--accent-green)}
-.hl .num{font-family:'DM Serif Display',serif;font-size:1.75rem;display:block;margin-bottom:.3rem}
-.hl.blue .num{color:var(--accent)}.hl.red .num{color:var(--accent3)}.hl.green .num{color:var(--accent-green)}
-.hl p{font-size:.78rem;color:var(--mid);line-height:1.5;margin:0}
-.docs-section h2{font-family:'DM Serif Display',serif;font-size:1.5rem;font-weight:400;margin-bottom:1.25rem}
-.doc-list{display:flex;flex-direction:column;gap:.85rem}
-.doc-link{display:flex;align-items:center;justify-content:space-between;background:var(--white);border:1px solid var(--light);border-radius:10px;padding:1.1rem 1.4rem;text-decoration:none;color:var(--dark);transition:box-shadow .2s,border-color .2s}
+.body{max-width:960px;margin:0 auto;padding:3.5rem 2rem 5rem}
+.proj-meta{margin:2rem 0}
+.proj-meta dt{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:1rem}
+.proj-meta dd{font-size:.88rem;color:var(--mid);margin-top:.25rem;line-height:1.7;font-weight:300}
+.finding-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin:2rem 0 3rem}
+.finding-card{background:var(--white);border-radius:12px;border:1px solid var(--light);padding:1.25rem;border-top:3px solid var(--accent)}
+.finding-card.red{border-top-color:var(--accent3)}.finding-card.green{border-top-color:var(--accent-green)}
+.finding-card .fnum{font-size:1.5rem;font-weight:800;display:block;margin-bottom:.25rem}
+.finding-card .fnum.blue{color:var(--accent)}.finding-card .fnum.red{color:var(--accent3)}.finding-card .fnum.green{color:var(--accent-green)}
+.finding-card p{font-size:.8rem;color:var(--mid)}
+.viz-wrap{background:var(--white);border-radius:14px;border:1px solid var(--light);overflow:hidden;margin-bottom:2rem}
+.viz-inner{background:#eef3f8;padding:1.25rem}
+.chart-title{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-bottom:.75rem}
+.bar-h{display:flex;align-items:center;gap:.5rem;font-size:.71rem;margin-bottom:.45rem}
+.bar-h .bl{flex-shrink:0;width:70px;text-align:right;color:var(--mid)}
+.bar-h .bf{height:18px;border-radius:3px}
+.bar-h .bv{flex-shrink:0;font-weight:700;font-size:.7rem;color:var(--dark);min-width:30px}
+.docs-section{margin-top:3rem}
+.docs-section h2{font-family:'DM Serif Display',serif;font-size:1.4rem;font-weight:400;margin-bottom:1.1rem}
+.doc-list{display:flex;flex-direction:column;gap:.75rem}
+.doc-link{display:flex;align-items:center;justify-content:space-between;background:var(--white);border:1px solid var(--light);border-radius:10px;padding:1rem 1.25rem;text-decoration:none;color:var(--dark);transition:box-shadow .2s,border-color .2s}
 .doc-link:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);border-color:var(--accent)}
-.doc-link-left{display:flex;align-items:center;gap:1rem}
-.doc-icon{font-size:1.4rem}
-.doc-info h4{font-size:.9rem;font-weight:600;margin-bottom:.15rem}
-.doc-info span{font-size:.78rem;color:var(--mid)}
+.doc-link-left{display:flex;align-items:center;gap:.9rem}
+.doc-icon{font-size:1.3rem}
+.doc-info h4{font-size:.88rem;font-weight:600;margin-bottom:.1rem}
+.doc-info span{font-size:.76rem;color:var(--mid)}
 .doc-arrow{font-size:.85rem;color:var(--accent);font-weight:700}
 .proj-nav{background:var(--dark);padding:2rem}
-.proj-nav-inner{max-width:900px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+.proj-nav-inner{max-width:960px;margin:auto;display:flex;justify-content:space-between;align-items:center}
 .proj-nav a{color:#999;text-decoration:none;font-size:.82rem;font-weight:500;transition:color .2s}
 .proj-nav a:hover{color:#fff}
 .proj-nav .right{text-align:right}
 .proj-nav .lbl{font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:#555;margin-bottom:.25rem}
-@media(max-width:700px){.highlights{grid-template-columns:1fr}}
+h2.section{font-family:'DM Serif Display',serif;font-size:1.4rem;font-weight:400;margin-bottom:1rem;margin-top:2.5rem}
+@media(max-width:700px){.finding-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -62,37 +72,110 @@ nav{position:fixed;top:0;width:100%;background:rgba(249,248,246,.96);backdrop-fi
     <div style="margin-top:.75rem">
       <span class="tag">Environmental Justice</span>
       <span class="tag">Census Data</span>
-      <span class="tag">GIS / Spatial Join</span>
-      <span class="tag">Choropleth Mapping</span>
+      <span class="tag">GIS</span>
+      <span class="tag">Spatial Join</span>
     </div>
   </div>
 </div>
 
 <div class="body">
-  <div class="overview" style="margin-bottom:3rem">
-    <h2>Overview</h2>
-    <p>Roxbury and Dorchester rank first and second in Boston for raw park count — yet their residents face significant green space inequities. This project exposed that paradox by shifting from raw park counts to a <strong>parks-per-1,000-residents</strong> metric using 2020 Census data, spatially joined to neighborhood boundaries in ArcGIS.</p>
-    <p>The two choropleth maps — one showing raw counts, one showing per-capita access — tell opposite stories about the same city, revealing that standard metrics systematically misidentify which communities need investment. Downtown, Leather District, and Harbor Islands have effectively zero parks per capita yet are invisible in raw count analyses.</p>
+
+  <dl class="proj-meta">
+    <dt>Problem</dt>
+    <dd>Roxbury and Dorchester have the <em>most</em> parks in Boston — yet their residents are among the least well-served. How can raw park counts mislead, and what does per-capita access reveal?</dd>
+    <dt>Methods</dt>
+    <dd>Spatially joined the City of Boston Parks Dataset to neighborhood boundary layers (WGS 84), then calculated a <strong>parks-per-1,000-residents</strong> metric using 2020 Census data. Visualized as two choropleth maps (Map A: raw count; Map B: per capita) using graduated colors and natural breaks to expose the gap between quantity and access.</dd>
+    <dt>Key Finding</dt>
+    <dd>Roxbury (144 parks) and Dorchester (143) top the raw count — but high population density means residents still experience overcrowding and limited access. Suburban neighborhoods like West Roxbury and Hyde Park score far higher per capita. Downtown, Leather District, and Harbor Islands have <em>zero</em> parks per capita.</dd>
+    <dt>Policy Implication</dt>
+    <dd>Raw park counts are a misleading equity metric. Per-capita access, tied to population density and demographics, should guide capital investment. Priority targets: Leather District, Charlestown, and Downtown for new green space; Roxbury and Dorchester for transit access and infrastructure upgrades.</dd>
+  </dl>
+
+  <h2 class="section">Headline Findings</h2>
+  <div class="finding-row">
+    <div class="finding-card red">
+      <span class="fnum red">144</span>
+      <p>Parks in Roxbury — highest raw count in Boston, yet among the lowest per-capita access due to population density.</p>
+    </div>
+    <div class="finding-card green">
+      <span class="fnum green">High</span>
+      <p>Per-capita rank for West Roxbury and Hyde Park — suburban neighborhoods invisible in raw count analyses.</p>
+    </div>
+    <div class="finding-card">
+      <span class="fnum blue">0</span>
+      <p>Parks per capita in Leather District, Harbor Islands, and Downtown — a hidden access deficit.</p>
+    </div>
   </div>
 
-  <div class="highlights">
-    <div class="hl red"><span class="num">144</span><p>Parks in Roxbury — highest raw count in Boston, yet among the lowest per-capita access</p></div>
-    <div class="hl green"><span class="num">High</span><p>Per-capita rank for West Roxbury and Hyde Park — invisible in raw count rankings</p></div>
-    <div class="hl blue"><span class="num">0</span><p>Parks per capita in Leather District, Harbor Islands, and Downtown</p></div>
+  <h2 class="section">Visualizations</h2>
+  <div class="viz-wrap">
+    <div class="viz-inner">
+      <div class="chart-title">Parks Per Capita · The Count vs. Access Paradox</div>
+      <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+        <text x="150" y="14" text-anchor="middle" font-size="7.5" fill="#457b9d" font-weight="700">RAW COUNT HIGH → per capita LOW</text>
+        <circle cx="72" cy="130" r="36" fill="#e76f51" opacity=".82"/>
+        <text x="72" y="123" text-anchor="middle" font-size="7" fill="#fff" font-weight="700">ROXBURY</text>
+        <text x="72" y="134" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="800">144</text>
+        <text x="72" y="145" text-anchor="middle" font-size="6.5" fill="#fdd" opacity=".9">parks (raw)</text>
+        <text x="72" y="155" text-anchor="middle" font-size="6.5" fill="#fdd">low per capita</text>
+        <circle cx="165" cy="138" r="34" fill="#e98060" opacity=".82"/>
+        <text x="165" y="130" text-anchor="middle" font-size="7" fill="#fff" font-weight="700">DORCHESTER</text>
+        <text x="165" y="141" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="800">143</text>
+        <text x="165" y="152" text-anchor="middle" font-size="6.5" fill="#fdd" opacity=".9">parks (raw)</text>
+        <text x="165" y="162" text-anchor="middle" font-size="6.5" fill="#fdd">overcrowded</text>
+        <circle cx="252" cy="75" r="22" fill="#2d6a4f" opacity=".88"/>
+        <text x="252" y="69" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">W. ROXBURY</text>
+        <text x="252" y="80" text-anchor="middle" font-size="9" fill="#fff" font-weight="800">high</text>
+        <text x="252" y="90" text-anchor="middle" font-size="6.5" fill="#b7e4c7">per capita</text>
+        <circle cx="252" cy="140" r="22" fill="#40916c" opacity=".88"/>
+        <text x="252" y="133" text-anchor="middle" font-size="6" fill="#fff" font-weight="700">HYDE</text>
+        <text x="252" y="143" text-anchor="middle" font-size="6" fill="#fff" font-weight="700">PARK</text>
+        <text x="252" y="153" text-anchor="middle" font-size="9" fill="#fff" font-weight="800">high</text>
+        <rect x="18" y="192" width="64" height="32" rx="4" fill="#1a1a1a" opacity=".75"/>
+        <text x="50" y="206" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">LEATHER DIST.</text>
+        <text x="50" y="217" text-anchor="middle" font-size="8" fill="#f4d03f" font-weight="800">0 parks</text>
+        <rect x="90" y="192" width="64" height="32" rx="4" fill="#1a1a1a" opacity=".75"/>
+        <text x="122" y="206" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">HARBOR ISLANDS</text>
+        <text x="122" y="217" text-anchor="middle" font-size="8" fill="#f4d03f" font-weight="800">0 parks</text>
+        <rect x="162" y="192" width="52" height="32" rx="4" fill="#333" opacity=".75"/>
+        <text x="188" y="206" text-anchor="middle" font-size="6.5" fill="#fff" font-weight="700">DOWNTOWN</text>
+        <text x="188" y="217" text-anchor="middle" font-size="8" fill="#f4d03f" font-weight="800">≈0 /capita</text>
+        <path d="M105 130 Q135 100 230 82" fill="none" stroke="#457b9d" stroke-width="1.2" stroke-dasharray="3,2"/>
+        <text x="140" y="97" font-size="7" fill="#457b9d" font-style="italic">count ≠ access</text>
+      </svg>
+
+      <div style="margin-top:1rem">
+        <div class="chart-title">Raw Count vs. Per-Capita Rank (selected neighborhoods)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+          <div>
+            <div style="color:#888;margin-bottom:.4rem;font-weight:700;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase">Raw Count Rank</div>
+            <div class="bar-h"><span class="bl">Roxbury</span><div class="bf" style="width:84%;background:#e76f51"></div><span class="bv">144</span></div>
+            <div class="bar-h"><span class="bl">Dorchester</span><div class="bf" style="width:83%;background:#e98060"></div><span class="bv">143</span></div>
+            <div class="bar-h"><span class="bl">E. Boston</span><div class="bf" style="width:42%;background:#f5c0a0"></div><span class="bv">61</span></div>
+            <div class="bar-h"><span class="bl">Beacon Hill</span><div class="bf" style="width:11%;background:#fde8d8"></div><span class="bv">16</span></div>
+          </div>
+          <div>
+            <div style="color:#888;margin-bottom:.4rem;font-weight:700;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase">Per Capita Rank</div>
+            <div class="bar-h"><span class="bl">W. Roxbury</span><div class="bf" style="width:90%;background:#2d6a4f"></div><span class="bv">high</span></div>
+            <div class="bar-h"><span class="bl">Hyde Park</span><div class="bf" style="width:78%;background:#40916c"></div><span class="bv">high</span></div>
+            <div class="bar-h"><span class="bl">Roxbury</span><div class="bf" style="width:22%;background:#e76f51"></div><span class="bv">low</span></div>
+            <div class="bar-h"><span class="bl">Downtown</span><div class="bf" style="width:4%;background:#1a1a1a"></div><span class="bv">≈0</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="docs-section">
-    <h2>Project Documents</h2>
+    <h2>Project Document</h2>
     <div class="doc-list">
       <a class="doc-link" href="https://drive.google.com/file/d/1Bjj2CJr8-wnHHtAkJWXsp-R2O3UnEqtn/view?usp=sharing" target="_blank">
-        <div class="doc-link-left">
-          <span class="doc-icon">📄</span>
-          <div class="doc-info"><h4>Full Report &amp; Maps</h4><span>Choropleth maps, methodology, and full findings</span></div>
-        </div>
+        <div class="doc-link-left"><span class="doc-icon">📄</span><div class="doc-info"><h4>Full Report (PDF)</h4><span>Complete analysis with choropleth maps and findings</span></div></div>
         <span class="doc-arrow">→</span>
       </a>
     </div>
   </div>
+
 </div>
 
 <div class="proj-nav">
